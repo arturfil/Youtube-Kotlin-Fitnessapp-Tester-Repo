@@ -49,18 +49,18 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
                 mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener {
                         if (it.isSuccessful) {
-                           // val user = mkUser(fullName, email)
-                            //var reference = mDatabase.child("users").child(it.result.user.uid)
-                            //reference.setValue(user)
-                              //  .addOnCompleteListener {
-                                //    if (it.isSuccessful) {
+                           val user = mkUser(fullName, email)
+                            var reference = mDatabase.child("users").child(it.result.user.uid)
+                            reference.setValue(user)
+                              .addOnCompleteListener {
+                                    if (it.isSuccessful) {
                                         showToast("Registration was successful!")
                                         startActivity(Intent(this, MainActivity::class.java))
                                         finish()
-                                  //  } else {
-                                  //      showToast("Something went wrong, please try again later")
-                                  //  }
-                        //        }
+                                    } else {
+                                        showToast("Something went wrong, please try again later")
+                                    }
+                              }
                         } else {
                             showToast("Something went wrong, please try again later")
                         }

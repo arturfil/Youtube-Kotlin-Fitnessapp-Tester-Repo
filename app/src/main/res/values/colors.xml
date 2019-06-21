@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#2E2F36</color>
     <color name="colorAccent">#D81B60</color>
     <color name="white">#FFF</color>
+    <color name="light_gray">#C9C9C9</color>
     <color name="blueTeal">#13A9E9</color>
     <color name="buttonColor">#12AD9A</color>
     <color name="emeralGreen">#25D690</color>

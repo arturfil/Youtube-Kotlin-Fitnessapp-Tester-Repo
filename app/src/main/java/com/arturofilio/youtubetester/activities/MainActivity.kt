@@ -18,6 +18,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 finish()
             }
         }
+
+        when(view.id) {
+            R.id.profile_btn -> {
+                startActivity(Intent(this,ProfileActivity::class.java))
+            }
+        }
     }
 
     private val TAG = "MainActivity"
@@ -29,5 +35,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         mAuth = FirebaseAuth.getInstance()
         logout_btn.setOnClickListener(this)
+        profile_btn.setOnClickListener(this)
     }
 }
