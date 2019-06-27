@@ -43,4 +43,6 @@
         android:text="Log Out"
         />
 
+    <include layout="@layout/bottom_navigation_view"/>
+
 </android.support.constraint.ConstraintLayout>
